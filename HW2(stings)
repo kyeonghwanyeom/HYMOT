@@ -1,5 +1,7 @@
 #2025208751 염경환 
 
-print ("Hello, world") 
+#Exercise Strings 1
+A = "1"
+#결과
+1
 
-print ("Hello, world") # print the traditional hello world
