@@ -12,3 +12,33 @@ B = "2"
 C = A + B
 #결과
 #12
+
+D = "ABCDEFG"
+print(D[0:3])
+#결과
+#ABC
+
+E = 'clocrkr1e1c1t'
+print(E[::2])
+#결과
+#correct
+
+print("\\")
+#결과
+#\
+
+F = "You are wrong"
+F.upper()
+#결과
+#YOU ARE WRONG
+
+G = "Mary had a little lamb Little lamb, little lamb Mary had a little lamb \
+Its fleece was white as snow And everywhere that Mary went Mary went, Mary went \
+Everywhere that Mary went The lamb was sure to go"
+G.find('snow')
+#결과
+#95
+
+G.replace('Mary','Bob')
+#결과
+#Bob had a little lamb Little lamb, little lamb Bob had a little lamb Its fleece was white as snow And everywhere that Bob went Bob went, Bob went Everywhere that Bob went The lamb was sure to go
