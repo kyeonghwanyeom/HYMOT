@@ -1,3 +1,33 @@
-#Exercise 1 (Types) : Your First Program
 #2025208751 염경환 
 
+#Exercise 1 (Types) : Your First Program
+
+print("Hello, world")
+# 결과
+# Hello, world
+
+print("Hello, world!") # Print the traditional hello world
+# 결과
+# Hello, world!
+
+
+#Exercise 2 (Types): Get the object type
+type(12.0)
+# 결과
+# float
+
+#Exercise 3 (Types): Types
+type(6/2)
+# 결과
+# float
+
+#Exercise 4 (Types): Expression
+160//60
+# 결과
+# 2
+
+#Exercise 5 (Types): Expression and Variables in Python
+x=3+2*2
+print(x)
+# 결과
+# 7
