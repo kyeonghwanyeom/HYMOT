@@ -1,7 +1,6 @@
 #2025208751 염경환 
 
 #Exercise 1 (Types) : Your First Program
-
 print("Hello, world")
 # 결과
 # Hello, world
@@ -9,7 +8,6 @@ print("Hello, world")
 print("Hello, world!") # Print the traditional hello world
 # 결과
 # Hello, world!
-
 
 #Exercise 2 (Types): Get the object type
 type(12.0)
@@ -31,3 +29,14 @@ x=3+2*2
 print(x)
 # 결과
 # 7
+
+y=(3+2)*2
+y
+# 결과
+# 10
+
+z=x+y
+z
+# 결과
+# 17
+
