@@ -1,3 +1,23 @@
 #2025208751 염경환 
 
+Quiz on Conditions
 
+
+BackinBlack = 8.5
+if BackinBlack > 8 :
+  print("This album is Amazing!") 
+This album is Amazing!
+
+rating = 8.5
+
+if rating > 8 :
+  print("This album is Amazing!") 
+else : 
+  print("this album is ok")
+This album is Amazing!
+
+album_year = 1979
+
+if album_year <1980 or album_year ==1991 or album_year ==1993: 
+  print("the album is came out")
+the album is came out
