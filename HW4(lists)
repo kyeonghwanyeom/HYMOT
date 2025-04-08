@@ -1,1 +1,19 @@
+#2025208751 염경환 
+
+a_list=[1, "hello", [1,2,3],True]
+a_list
+[1, 'hello', [1, 2, 3], True]
+
+a_list[1]
+hello
+
+a_list[1:4]
+['hello', [1, 2, 3], True]
+
+A = [1, 'a']
+B = [2, 1, 'd']
+C= A+B
+print(C)
+[1, 'a', 2, 1, 'd']
+
 
