@@ -1,6 +1,21 @@
+#2025208751 염경환 
 
+def div(a,b):
+    result=a/b
+    print(result)
 
-ef add(a):
-    b = a + 1
-    print(a, "if you add one", b)
-    return(a, b) # y=x+1, (x,y)
+div(2,4)
+0.5
+
+def con(a, b):
+    return(a + b)
+
+con(2,4)
+6
+
+con('i','love you')
+ilove you
+
+con([2,1,2],[3,1,1])
+[2, 1, 2, 3, 1, 1]
+
