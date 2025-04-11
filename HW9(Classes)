@@ -1,1 +1,51 @@
+#2025208751 염경환 
+
+
+class Circle(object):
+    
+    # Constructor
+    def __init__(self, radius, color='blue'):
+        self.radius = radius
+        self.color = color 
+    
+    # Method
+    def add_radius(self, r):
+        self.radius = self.radius + r
+        return(self.radius)
+    
+    # Method
+    def drawCircle(self):
+        plt.gca().add_patch(plt.Circle((0, 0), radius=self.radius, fc=self.color))
+        plt.axis('scaled')
+        plt.show()  
+
+BlueCircle=Circle(100,'blue')
+BlueCircle.drawCircle()
+BlueCircle.radius
+
+100
+
+class Rectangle(object):
+    
+    # Constructor #아.. 내가 이제 객체를 하나 초기화 해서 만들어 보겠다. 
+    def __init__(self, width = 2, height = 3, color ='r'): #공식처럼 사용하면 됨
+        self.height = height 
+        self.width = width
+        self.color = color
+    
+    # Method
+    def drawRectangle(self):
+        plt.gca().add_patch(plt.Rectangle((0, 0), self.width, self.height ,fc=self.color))
+        plt.axis('scaled')
+        plt.show()
+
+SkinnyBlueRectangle = Rectangle(2, 10, 'blue')
+SkinnyBlueRectangle.height 
+10
+
+SkinnyBlueRectangle.width
+2
+
+SkinnyBlueRectangle.color
+blue
 
