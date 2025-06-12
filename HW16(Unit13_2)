@@ -1,1 +1,30 @@
+#2025208751 염경환 
+
+import gdown
+
+gdown.download('https://bit.ly/3q9SZix', '20s_best_book.json', quiet=False)
+Downloading...
+From: https://bit.ly/3q9SZix
+To: /content/20s_best_book.json
+100%|██████████| 92.9k/92.9k [00:00<00:00, 52.0MB/s]
+20s_best_book.json
+
+import pandas as pd
+
+books_df = pd.read_json('20s_best_book.json')
+books_df.head()
+
+books = books_df[['no','ranking','bookname','authors','publisher',
+                 'publication_year','isbn13']]
+books.head()
+
+import requests
+
+isbn = 9791190090018      # '우리가 빛의 속도로 갈 수 없다면'의 ISBN
+url = 'http://www.yes24.com/Product/Search?domain=BOOK&query={}'
+
+r = requests.get(url.format(isbn))
+
+url = 'http://www.yes24.com'+prd_link['href']
+r = requests.get(url)
 
