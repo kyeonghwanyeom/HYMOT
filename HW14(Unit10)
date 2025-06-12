@@ -1,3 +1,302 @@
 #2025208751 염경환 
 
+result = 0
+def adder(num):
+  global result
+  result += num
+  return result
+
+
+print(adder(3))
+3
+
+print(adder(4))
+7
+
+result1 = 0
+result2 = 0
+
+def adder1(num):
+  global result1
+  result1 += num
+  return result1
+
+def adder2(num):
+  global result2
+  result2 += num
+  return result2
+
+print(adder1(3))
+print(adder1(4))
+print(adder2(3))
+print(adder2(7))
+
+3
+7
+3
+10
+
+class Calculator:
+  def __init__(self):
+    self.result = 0
+
+  def adder(self, num):
+    self.result += num
+    return self.result
+
+cal1 = Calculator()
+cal2 = Calculator()
+
+print(cal1.adder(3))
+print(cal1.adder(4))
+print(cal2.adder(3))
+print(cal2.adder(7))
+
+3
+7
+3
+10
+
+class Service:
+  secret= "지구멸망"
+
+an = Service()
+
+an.secret
+지구멸망
+
+Service.secret
+지구멸망
+
+Service.secret = "지구 멸망 뻥"
+print(an.secret)
+지구 멸망 뻥
+
+class Service:
+  secret= "지구멸망"
+  def sum(self, a, b):
+    result = a + b
+    print("%s + %s = %s 입니다." % (a, b, result))
+
+an = Service()
+
+an.sum(1,1)
+1 + 1 = 2 입니다.
+
+class Service:
+  secret= "지구멸망"
+  def setname(self, name):
+    self.name = name
+  def sum(self, a, b):
+    result = a + b
+    print("%s님, %s + %s = %s 입니다." % (self.name, a, b, result))
+
+an = Service()
+an.setname("박달도사")
+an.sum(1,1)
+박달도사님, 1 + 1 = 2 입니다.
+
+kim=Service()
+park=Service()
+kim.name= "김정보"
+park.name="박융합"
+
+print(kim.name)
+print(park.name)
+
+kim.secret= "노 비밀"
+print(park.secret)
+print(kim.secret)
+Service.secret
+
+김정보
+박융합
+지구멸망
+노 비밀
+지구멸망
+
+lee=Service()
+lee.sum(1,1)
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-19-777592967> in <cell line: 0>()
+      1 lee=Service()
+----> 2 lee.sum(1,1)
+
+<ipython-input-13-2234197931> in sum(self, a, b)
+      5   def sum(self, a, b):
+      6     result = a + b
+----> 7     print("%s님, %s + %s = %s 입니다." % (self.name, a, b, result))
+      8 
+      9 an = Service()
+
+AttributeError: 'Service' object has no attribute 'name'
+
+class Service:
+  secret= "지구멸망"
+  def _int__(self, name):
+    self.name = name
+  def sum(self, a, b):
+    result = a + b
+    print("%s + %s = %s 입니다." % (a, b, result))
+
+an.setname("박달도사")
+an.sum(1,1)
+박달도사님, 1 + 1 = 2 입니다.
+
+class FourCal:
+  pass
+
+a=FourCal()
+type(a)
+__main__.FourCal
+
+class FourCal:
+    def setdata(self, first, second):
+        self.first = first
+        self.second = second
+
+a=FourCal()
+a.setdata(4,2)
+
+print(a.first)
+print(a.second)
+
+4
+2
+
+class FourCal:
+    def setdata(self, first, second):
+        self.first = first
+        self.second = second
+    def sum(self):
+        result=self.first+self.second
+        return result
+
+a=FourCal()
+a.setdata(4,2)
+
+print(a.sum())
+
+6
+
+class FourCal:
+    def setdata(self, first, second):
+        self.first = first
+        self.second = second
+    def sum(self):
+        result=self.first + self.second
+        return result
+    def mul(self):
+        result=self.first * self.second
+        return result
+    def sub(self):
+        result=self.first - self.second
+        return result
+    def div(self):
+        result=self.first / self.second
+        return result
+
+a=FourCal()
+b=FourCal()
+a.setdata(4,2)
+b.setdata(3,7)
+
+print(a.sum())
+print(a.mul())
+print(a.sub())
+print(a.div())
+print(b.sub())
+
+6
+8
+2
+2.0
+-4
+
+import random
+
+player1_dice=[]
+player2_dice=[]
+
+for i in range(3):
+  player1_dice.append(random.randint(1,6))
+  player2_dice.append(random.randint(1,6))
+
+print("player 1 rolled" +str(player1_dice))
+print("player 2 rolled" +str(player2_dice))
+
+if sum(player1_dice) == sum(player2_dice):
+  print("Draw")
+
+elif sum(player1_dice) > sum(player2_dice):
+  print("player 1 win")
+else:
+  print("player 2 win")
+
+player 1 rolled[3, 1, 2]
+player 2 rolled[2, 6, 4]
+player 2 win
+
+import random
+
+player1_dice=[]
+player2_dice=[]
+
+for i in range(3):
+  player1_dice.append(random.randint(1,6))
+  player2_dice.append(random.randint(1,6))
+
+print("player 1 rolled" +str(player1_dice))
+print("player 2 rolled" +str(player2_dice))
+
+if sum(player1_dice) == sum(player2_dice):
+  print("Draw")
+
+elif sum(player1_dice) > sum(player2_dice):
+  print("player 1 win")
+else:
+  print("player 2 win")
+
+player 1 rolled[5, 1, 2]
+player 2 rolled[4, 1, 1]
+player 1 win
+
+from random import randint
+
+class Player:
+  def __init__(self):
+    self.dice=[]
+
+  def roll(self):
+     self.dice=[]
+     for i in range(3):
+         self.dice.append(randint(1,6))
+
+  def get_dice(self):
+      return self.dice
+
+player1 = Player()
+player2 = Player()
+
+player1.roll()
+player2.roll()
+
+print("player 1 rolled" +str(player1.dice))
+print("player 2 rolled" +str(player2.dice))
+
+if sum(player1.get_dice()) == sum(player2.get_dice()):
+  print("Draw")
+elif sum(player1.get_dice()) > sum(player2.get_dice()):
+  print("player 1 wins")
+else:
+  print("player 2 wins")
+
+player 1 rolled[4, 1, 4]
+player 2 rolled[3, 6, 6]
+player 2 wins
+
+
+
+
 
