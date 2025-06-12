@@ -1,1 +1,73 @@
 #2025208751 염경환 
+
+
+from google.colab import drivedrive.mount('/content/drive')
+
+ Mounted at /content/drive
+ 
+[4]
+0초
+path = '/content/drive/MyDrive/Colab Notebooks/menu.xml'
+
+ 
+[21]
+0초
+import xml.etree.ElementTree as ettree = et.parse(path)root = tree.getroot()print(root.tag)
+
+ menu
+ 
+[22]
+0초
+type(root)
+
+ xml.etree.ElementTree.Element
+ 
+[23]
+0초
+for child in root:  print('tag:',child.tag, 'attributes:', child.attrib)  for grandchild in child:    print('\ttag:', grandchild.tag, 'attributes:', grandchild.attrib)
+
+ tag: breakfast attributes: {'hours': '7-11'}
+	tag: item attributes: {'price': '$6.00'}
+	tag: item attributes: {'price': '$4.00'}
+tag: lunch attributes: {'hours': '11-3'}
+	tag: item attributes: {'price': '$5.00'}
+tag: dinner attributes: {'hours': '3-10'}
+	tag: item attributes: {'price': '8.00'}
+ 
+[24]
+0초
+type(root[0])
+ xml.etree.ElementTree.Element
+ 
+[29]
+0초
+print(root[0])
+print(root[0].get("hours"))
+print(root[0].keys())
+print(root[0].items())
+ <Element 'breakfast' at 0x7fb4573b13a0>
+7-11
+['hours']
+[('hours', '7-11')]
+ 
+[33]
+0초
+lunch=root.find("lunch")
+print(lunch)
+print(lunch.get("hours"))
+print(lunch.keys())
+print(lunch.items())
+ <Element 'lunch' at 0x7fb4573b0db0>
+11-3
+['hours']
+[('hours', '11-3')]
+ 
+[35]
+0초
+print(root[0].findall('item'))for item in root[0].findall('item'):  print(item.get('price'))  print(item.text)
+
+ [<Element 'item' at 0x7fb4573b01d0>, <Element 'item' at 0x7fb4573b1cb0>]
+$6.00
+breakfast burritos
+$4.00
+pancakes
